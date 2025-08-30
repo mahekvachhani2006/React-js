@@ -3,7 +3,7 @@ import { Button } from "./button";
 function Navbar({ name, user, contact, feedback, btnText, count = 0 }) {
   return (
     <>
-      <div className="nav">
+      <nav>
         <div className="logo">
           <img src={Logo} alt="Logo" />
         </div>
@@ -15,7 +15,7 @@ function Navbar({ name, user, contact, feedback, btnText, count = 0 }) {
           <Button btnText={btnText} />
           <li>{count}</li>
         </ul>
-      </div>
+      </nav>
     </>
   );
 }

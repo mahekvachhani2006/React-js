@@ -1,11 +1,29 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
+import Button2, { Button } from "./components/button";
+import { Form } from "./components/Form";
+
+const DUMMY = [
+  { id: 1, title: "first note", text: "Register" },
+  { id: 2, title: "second note", text: "Login" },
+  { id: 3, title: "third note", text: "Logout" },
+];
 
 function App() {
   return (
     <>
-      <Navbar name="Home" user="About" btntext="Login" count={10} />
-      <Navbar contact="Contact" feedback="Feedback" btntext="Logout" />
+      {DUMMY.map((item, index) => {
+        return (
+          <div key={index}>
+            <Navbar name={item.title} user="mahek" btnText={item.text} />
+          </div>
+        );
+      })}
+
+      <Button btnText="submit" />
+      <Button2 />
+
+      <Form />
     </>
   );
 }
