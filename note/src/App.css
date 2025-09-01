@@ -1,63 +1,60 @@
-.box {
-  background-color: rgb(255, 221, 227);
-  padding: 4%;
-  margin: 5%;
-  border-radius: 5% 10%;
-  box-shadow: 4px 4px 4px pink;
+body {
+  background-color: #f9f9f9;
+  padding: 50px;
 }
 
-.box:hover {
-  background-color: rgb(207, 170, 179);
-  box-shadow: 4px 4px 4px rgb(225, 211, 213);
+.header {
+  background-color: #1c1c1c;
   color: white;
+
+  padding: 25px;
+  margin-bottom: 25px;
+
 }
 
-.main {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+form {
+  margin-top: 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
 }
 
-.main button {
-  padding: 2%;
-  background-color: brown;
+input[type="text"],
+textarea,
+input[type="color"] {
+  padding: 0.6rem;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  padding: 15px;
+  width: 7%;
+  background-color: #007bff;
   color: white;
-  border: none;
-  border-radius: 10%;
+  border-radius: 6px;
+
 }
 
-.main button:hover {
-  background-color: white;
-  color: brown;
+button:hover {
+  background-color: #255383;
 }
 
-.main {
 
-  h1,
-  h4,
-  p {
-    padding-bottom: 3%;
-  }
+
+.note {
+  padding: 40px;
+  border-radius: 12px;
+  width: 300px;
 }
 
-.navbar {
-  background-color: rgb(34, 33, 33);
-  color: white;
-  padding: 2%;
+
+.note p {
+  margin: 5px;
 }
 
-.form {
-  padding-left: 2%;
-}
-
-input,
-textarea {
-  padding: 1% 80% 1% 1%;
-}
-
-.form button {
-  padding: 0.5%;
-  background-color: rgb(28, 135, 243);
-  border: none;
-  border-radius: 5%;
-  color: white;
+.note button {
+  background-color: #c82333;
+  width: auto;
 }

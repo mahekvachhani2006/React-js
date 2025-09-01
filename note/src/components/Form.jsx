@@ -1,54 +1,55 @@
 import React, { useState } from "react";
-export const Form = () => {
-  const [title, setTitle] = useState("mahek");
-  const [desc, setDesc] = useState("nyasha");
 
-  // useState() :
-  // Lets you add and manage data inside a component
+function NoteForm({ onAddNote }) {
+  const [title, setTitle] = useState("");
 
-  const titleChangeHandler = (event) => {
-    event.preventDefault();
-    setTitle(event.target.value);
-  };
-
-  const descChangeHandler = (e) => {
-    e.preventDefault();
-    setDesc(e.target.value);
-  };
+  const [description, setDescription] = useState("");
+  const [color, setColor] = useState("#f4cccc");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("form submited", title, desc);
+
+    const newNote = {
+      title,
+      description,
+      color,
+    };
+
+    onAddNote(newNote);
+
+    // Clear inputs after submit
+    setTitle("");
+    setDescription("");
+    setColor("#f4cccc");
   };
-  console.log(title);
 
   return (
-    <div className="form">
-      <h1>Create Note</h1>
-      <form onSubmit={handleSubmit}>
-        <label>Note Title</label>
-        <p></p>
-        <input
-          name="title"
-          type="text"
-          id="title"
-          onChange={titleChangeHandler}
-          placeholder="Enter Title....."
-        />
-        <br />
-        <label>Note Description</label>
-        <p></p>
-        <textarea
-          name="desc"
-          id="desc"
-          cols="20"
-          rows="10"
-          onChange={descChangeHandler}
-          placeholder="Enter Title..."
-        ></textarea>
-        <br />
-        <button>submit</button>
-      </form>
-    </div>
+    <form onSubmit={handleSubmit}>
+      <label>Note Title</label>
+      <input
+        type="text"
+        placeholder="Enter Title..."
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+      />
+
+      <label>Note Description</label>
+      <textarea
+        placeholder="Enter Description..."
+        value={description}
+        onChange={(e) => setDescription(e.target.value)}
+      />
+
+      <label>Note Color</label>
+      <input
+        type="color"
+        value={color}
+        onChange={(e) => setColor(e.target.value)}
+      />
+
+      <button type="submit">Submit</button>
+    </form>
   );
-};
+}
+
+export default NoteForm;
