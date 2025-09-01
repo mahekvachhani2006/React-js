@@ -1,6 +1,6 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
-import Button2, { Button } from "./components/button";
+import Button2, { Button } from "./components/Button";
 import { Form } from "./components/Form";
 
 const DUMMY = [
@@ -21,8 +21,6 @@ function App() {
       })}
 
       <Button btnText="submit" />
-      <Button2 />
-
       <Form />
     </>
   );

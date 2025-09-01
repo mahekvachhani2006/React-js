@@ -2,7 +2,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(40, 16, 96);
+    background-color: rgb(34, 13, 83);
     padding: 20px 30px;
 }
 
@@ -17,22 +17,11 @@ li {
     color: #11fcfc;
 }
 
-/**/
 /* Form.css */
-
-div {
-    max-width: 500px;
-    margin: 50px auto;
-    padding: 30px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    font-family: Arial, sans-serif;
-}
 
 h1 {
     text-align: center;
-    color: #333;
+    color: #b810aa;
 }
 
 form {
@@ -51,27 +40,14 @@ textarea {
     margin-top: 5px;
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #bbb;
+    border: 3px solid #bbb;
     border-radius: 4px;
     width: 100%;
-    box-sizing: border-box;
-}
-
-textarea {
-    resize: vertical;
 }
 
 button {
-    margin-top: 20px;
-    padding: 12px;
-    background-color: #4CAF50;
+    padding: 10px;
+    background-color: #3ab8b8;
     color: white;
-    border: none;
-    font-size: 16px;
     border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
 }

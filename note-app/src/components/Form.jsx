@@ -6,7 +6,9 @@ export const Form = () => {
 
   return (
     <div>
-      <h1>Creat Note</h1>
+      <h1>
+        <u>Creat Note</u>
+      </h1>
       <form>
         <label htmlFor="title">Title</label>
         <input type="text" id="title" />

@@ -1,25 +1,41 @@
-import React, { useState } from "react";
-import NoteForm from "./components/NoteForm";
-import NoteList from "./components/NoteList";
+import "./App.css";
+import Box from "./components/Box.jsx";
+import { Form } from "./components/Form.jsx";
+import { Navbar } from "./components/Navbar.jsx";
 
+const dummy = [
+  {
+    id: 1,
+    name: "HTML",
+    title: "first",
+    text: "Login",
+  },
+  {
+    id: 2,
+    name: "CSS",
+    title: "second",
+    text: "Register",
+  },
+  {
+    id: 3,
+    name: "JAVA-SCRIPT",
+    title: "third",
+    text: "Logout",
+  },
+];
 function App() {
-  const [notes, setNotes] = useState([]);
-
-  const addNote = (note) => {
-    setNotes([...notes, note]);
-  };
-
-  const deleteNote = (index) => {
-    const newNotes = notes.filter((_, i) => i !== index);
-    setNotes(newNotes);
-  };
-
   return (
     <>
-      <div className="App">
-        <h1>Create Note</h1>
-        <NoteForm addNote={addNote} />
-        <NoteList notes={notes} deleteNote={deleteNote} />
+      <Navbar name="Notes" />
+      <Form />
+      <div className="main">
+        {dummy.map((item, index) => {
+          return (
+            <div key={index}>
+              <Box name={item.name} title={item.title} btnText={item.text} />
+            </div>
+          );
+        })}
       </div>
     </>
   );

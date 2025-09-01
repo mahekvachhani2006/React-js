@@ -6,6 +6,4 @@ export const Button = ({ btnText }) => {
   );
 };
 
-export default function Button2() {
-  return <div>Button2</div>;
-}
+export default function Button2() {}

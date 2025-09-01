@@ -1,5 +1,5 @@
 import Logo from "../assets/react.svg";
-import { Button } from "./button";
+import { Button } from "./Button";
 function Navbar({ name, user, contact, feedback, btnText, count = 0 }) {
   return (
     <>
