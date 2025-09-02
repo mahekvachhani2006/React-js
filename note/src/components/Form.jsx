@@ -31,6 +31,7 @@ function NoteForm({ onAddNote }) {
         placeholder="Enter Title..."
         value={title}
         onChange={(e) => setTitle(e.target.value)}
+        required
       />
 
       <label>Note Description</label>
@@ -38,6 +39,7 @@ function NoteForm({ onAddNote }) {
         placeholder="Enter Description..."
         value={description}
         onChange={(e) => setDescription(e.target.value)}
+        required
       />
 
       <label>Note Color</label>

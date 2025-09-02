@@ -21,10 +21,9 @@ form {
 }
 
 input[type="text"],
-textarea,
-input[type="color"] {
-  padding: 0.6rem;
-  border: 2px solid #ccc;
+textarea {
+  padding: 10px;
+  border: 3px solid #ccc;
   border-radius: 6px;
 }
 
@@ -47,14 +46,25 @@ button:hover {
   padding: 40px;
   border-radius: 12px;
   width: 300px;
+
+
 }
 
 
 .note p {
   margin: 5px;
+
 }
 
 .note button {
   background-color: #c82333;
   width: auto;
+}
+
+
+.notes-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+
 }
